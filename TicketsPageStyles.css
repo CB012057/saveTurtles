@@ -1,0 +1,195 @@
+.headerTickets {
+    width: 100%;
+  height: 100px;
+    background-color: rgb(68, 107, 122);
+  text-align: center;
+  text-size-adjust: 20px;
+  
+  
+  }
+  {
+    padding:0;
+    margin:0;
+    font-family:poppins;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family:Helvetica,Arial,sans-serif;
+    background-color:#6a787b;
+    color: #ffffff;
+    
+}
+h1{
+    font-size:40px;
+    padding:20px;
+    
+    
+}
+.img1{
+    height:500px;
+    width:100%;
+    position: relative;
+}
+.heading2{
+    font-size:30px;
+    padding:10px;
+    padding-left: 20px;
+    
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px;
+    padding-left: 20px;
+}
+.Button5{
+    
+    font-size: 3vmin;
+    margin-top: 10px;
+    
+    
+    padding: 20px 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+
+
+
+
+  form {
+    padding: 25px;
+    background: rgb(68, 107, 122);
+    max-width: 500px;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  }
+  form h2 {
+    font-size: 27px;
+    text-align: center;
+    margin: 0px 0 30px;
+  }
+  form .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 7px;
+  }
+  form input,
+  form select {
+    height: 45px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #bfbfbf;
+  }
+  form input:focus,
+  form select:focus {
+    border-color: #9a9a9a;
+  }
+  form input.error,
+  form select.error {
+    border-color: #f91919;
+    background: #f9f0f1;
+  }
+  form small {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    color: #f91919;
+  }
+  form .password i {
+    position: absolute;
+    right: 0px;
+    height: 45px;
+    top: 28px;
+    font-size: 13px;
+    line-height: 45px;
+    width: 45px;
+    cursor: pointer;
+    color: #939393;
+    text-align: center;
+  }
+  .submit-btn {
+    margin-top: 30px;
+  }
+  .submit-btn input {
+    color: white;
+    border: none;
+    height: auto;
+    font-size: 16px;
+    padding: 13px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: center;
+    background: #23447b;
+    transition: 0.2s ease;
+  }
+  .submit-btn input:hover {
+    background: #23447b;
+  }
+  .form22 {
+    padding: 25px;
+    background: rgb(116, 161, 179);
+    max-width: 500px;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  }
+  .button123 {
+    margin-top: 100px;
+    text-decoration: #ffffff;
+    
+    font-size: 3vmin;
+    margin: 30px;
+    padding: 20px 25px;
+    background-color: rgb(68, 107, 122);
+    border-radius: 30px;
+    border: 2px solid rgb(255, 255, 255);
+    padding-left: 20px;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  margin: auto;
+}
+
+th, td {
+  border-collapse: collapse;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 8px;
+  text-align: center;
+  background-color: rgb(68, 107, 122);
+}
+
+th {
+  background-color: rgb(50, 79, 91);
+}
+.btn {
+  
+  
+  
+  
+  background-color: rgb(68, 107, 122);
+  border-radius: 30px;
+  
+  padding-top: 30px;
+  padding-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.para {
+  font: size 40px;
+}

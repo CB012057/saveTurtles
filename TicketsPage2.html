@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TICKETS</title>
+    <link rel="stylesheet" href="TicketsPageStyles.css">
+    
+</head>
+<body>
+    <div class="headerTickets">
+        <h1><center>BUY TICKETS</center></h1>
+        </div>
+        <img src="D:\image\turtle-in-the-sand-wallpaper.jpg" class="img1">
+        <br>
+        <br>
+        <a href="Hikkaduwa Turtle Hatchery.html" class="button1"> -Home- </a>
+        <br>
+        <br>
+        <br>
+        
+    <form id="bookingForm">
+        <label for="select">SELECT</label>
+        <label for="sriLankanAdult">Sri Lankan Adult:</label>
+        <input type="number" id="sriLankanAdult" name="sriLankanAdult" value="0" min="0">
+        <br>
+        <label for="sriLankanChild">Sri Lankan Child:</label>
+        <input type="number" id="sriLankanChild" name="sriLankanChild" value="0" min="0">
+        <br>
+        <label for="sriLankanInfant">Sri Lankan Infant:</label>
+        <input type="number" id="sriLankanInfant" name="sriLankanInfant" value="0" min="0">
+        <br>
+        <label for="foreignAdult">Foreign Adult:</label>
+        <input type="number" id="foreignAdult" name="foreignAdult" value="0" min="0">
+        <br>
+        <label for="foreignChild">Foreign Child:</label>
+        <input type="number" id="foreignChild" name="foreignChild" value="0" min="0">
+        <br>
+        <label for="foreignInfant">Foreign Infant:</label>
+        <input type="number" id="foreignInfant" name="foreignInfant" value="0" min="0">
+        <br>
+    </form>
+    <br>
+    <br>
+    <form id="form22">
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" name="date">
+    </form>
+    <br>
+        <br>
+        <form>
+        <label for="time">Select Time Slot(s):</label><br>
+        <input type="checkbox" id="time1" name="time" value="7-8">
+        <label for="time1">7:00 - 8:00</label><br>
+        <input type="checkbox" id="time2" name="time" value="8-9">
+        <label for="time2">8:00 - 9:00</label><br>
+        <input type="checkbox" id="time3" name="time" value="10-11">
+        <label for="time3">10:00 - 11:00</label><br>
+        <input type="checkbox" id="time4" name="time" value="15-16">
+        <label for="time4">15:00 - 16:00</label><br>
+        <br>
+        <button type="button"onclick="generateTable()">CONFIRM</button>
+    </form>
+    <br>
+    <div id="tableContainer"></div>
+    <script>
+        function generateTable() {
+            const sriLankanAdult = parseInt(document.getElementById("sriLankanAdult").value);
+            const sriLankanChild = parseInt(document.getElementById("sriLankanChild").value);
+            const sriLankanInfant = parseInt(document.getElementById("sriLankanInfant").value);
+            const foreignAdult = parseInt(document.getElementById("foreignAdult").value);
+            const foreignChild = parseInt(document.getElementById("foreignChild").value);
+            const foreignInfant = parseInt(document.getElementById("foreignInfant").value);
+            const date = document.getElementById("date").value;
+            const selectedTimes = document.querySelectorAll('input[name="time"]:checked');
+            const timeMultiplier = selectedTimes.length;
+
+            const ticketDetails = [];
+
+            if (sriLankanAdult > 0) {
+                ticketDetails.push(sriLankanAdult + " Sri Lankan Adult");
+            }
+            if (sriLankanChild > 0) {
+                ticketDetails.push(sriLankanChild + " Sri Lankan Child");
+            }
+            if (sriLankanInfant > 0) {
+                ticketDetails.push(sriLankanInfant + " Sri Lankan Infant (Free)");
+            }
+            if (foreignAdult > 0) {
+                ticketDetails.push(foreignAdult + " Foreign Adult");
+            }
+            if (foreignChild > 0) {
+                ticketDetails.push(foreignChild + " Foreign Child");
+            }
+            if (foreignInfant > 0) {
+                ticketDetails.push(foreignInfant + " Foreign Infant (Free)");
+            }  
+
+            const tableData = [
+                { ticketType: sriLankanAdult + " Sri Lankan Adult", price: (5 * sriLankanAdult) * timeMultiplier },
+                { ticketType: sriLankanChild + " Sri Lankan Child", price: (3 * sriLankanChild) * timeMultiplier },
+                
+                { ticketType: foreignAdult + " Foreign Adult", price: (8 * foreignAdult) * timeMultiplier },
+                { ticketType: foreignChild + " Foreign Child", price: (6 * foreignChild) * timeMultiplier }
+                
+            ];
+
+            const validTableData = tableData.filter(data => data.price !== 0);
+
+            const table = document.createElement("table");
+            const thead = document.createElement("thead");
+            const tbody = document.createElement("tbody");
+
+            const headerRow = document.createElement("tr");
+            const headerCell1 = document.createElement("th");
+            const headerCell2 = document.createElement("th");
+            headerCell1.textContent = "Ticket Type";
+            headerCell2.textContent = "Price";
+
+            headerRow.appendChild(headerCell1);
+            headerRow.appendChild(headerCell2);
+            thead.appendChild(headerRow);
+
+            validTableData.forEach(data => {
+                const row = document.createElement("tr");
+                const cell1 = document.createElement("td");
+                const cell2 = document.createElement("td");
+                cell1.textContent = data.ticketType;
+                cell2.textContent = "$" + data.price.toFixed(2);
+                row.appendChild(cell1);
+                row.appendChild(cell2);
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            document.getElementById("tableContainer").innerHTML = "";
+            document.getElementById("tableContainer").appendChild(table);
+
+            const summaryTable = document.createElement("table");
+            const summaryBody = document.createElement("tbody");
+
+            const dateRow = document.createElement("tr");
+            const dateCell1 = document.createElement("td");
+            const dateCell2 = document.createElement("td");
+            dateCell1.textContent = "Date:";
+            dateCell2.textContent = date;
+            dateRow.appendChild(dateCell1);
+            dateRow.appendChild(dateCell2);
+            summaryBody.appendChild(dateRow);
+
+            const timeRow = document.createElement("tr");
+            const timeCell1 = document.createElement("td");
+            const timeCell2 = document.createElement("td");
+            timeCell1.textContent = "Time Slots:";
+            timeCell2.textContent = selectedTimes.length;
+            timeRow.appendChild(timeCell1);
+            timeRow.appendChild(timeCell2);
+            summaryBody.appendChild(timeRow);
+
+            const durationRow = document.createElement("tr");
+            const durationCell1 = document.createElement("td");
+            const durationCell2 = document.createElement("td");
+            durationCell1.textContent = "Duration:";
+            durationCell2.textContent = timeMultiplier > 1 ? timeMultiplier + " slots" : timeMultiplier + " slot";
+            durationRow.appendChild(durationCell1);
+            durationRow.appendChild(durationCell2);
+            summaryBody.appendChild(durationRow);
+
+            
+
+            summaryTable.appendChild(summaryBody);
+            document.getElementById("tableContainer").appendChild(summaryTable);
+        }
+    </script>
+    <br>
+    <br>
+    <a href="DetailsPage.html"><button class="button123">Continue With Purchase</button></a>
+
+    
+</body>
+</html>
+    

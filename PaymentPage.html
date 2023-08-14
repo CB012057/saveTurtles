@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT</title>
+    <link rel="stylesheet" href="TicketsPageStyles.css">
+</head>
+<body>
+    <div class="headerTickets">
+        <h1><center>PAYMENTS</center></h1>
+        </div>
+        <img src="D:\image\turtle-in-the-sand-wallpaper.jpg" class="img1">
+        <br>
+        <br>
+        <a href="DetailsPage.html" class="button1"> --Back-- </a>
+        <br>
+        <br>
+        <br>
+        <h2>Payment Details</h2>
+        <div class="formclass">
+            <form action="confirmation.html" id="FormPay">
+                <div class="card space icon-relative">
+                    <label class="label">Card holder:</label>
+                    <input type="text" class="input" placeholder="Name on Card" id="cardname" required>
+
+                </div>
+                <div class="card space icon-relative">
+                    <label class="label">Card number:</label>
+                    <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="Card Number" id="cardnumber" required>
+
+                </div>
+                <div class="card-grp space">
+                    <div class="card-item icon-relative">
+                        <label class="label">Expiry date:</label>
+                        <input type="text" name="expiry-data" class="input" placeholder="00 / 00" id="expirydate" required>
+
+                    </div>
+                    <div class="card-item icon-relative">
+                        <label class="label">CVC:</label>
+                        <input type="text" class="input" data-mask="000" placeholder="000" id="cvc" maxlength="3" required>
+
+                    </div>
+                </div>
+
+                <div class="btn">
+                    <a href="Confirmationpage.html"button id="totalbutton" onclick="myFunction()"></button>
+
+                </div>
+            </form>
+
+
+        <script src="Payment.js"></script>
+
+
+</body>
+</html>
