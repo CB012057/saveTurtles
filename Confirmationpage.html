@@ -5,69 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>confirmation</title>
     <link rel="stylesheet" href="TicketsPageStyles.css">
+    <script defer>
+      // get items from local storage
+      slAdultCount = localStorage.getItem("slAdultCount");
+      slChildCount = localStorage.getItem("slChildCount");
+      slInfantCount = localStorage.getItem("slInfantCount");
+      foreignAdultCount = localStorage.getItem("foreignAdultCount");
+      foreignChildCount = localStorage.getItem("foreignChildCount");
+      foreignInfantCount = localStorage.getItem("foreignInfantCount");
+      timeDuration = localStorage.getItem("timeDuration");
+      // visitDate = localStorage.getItem("visitDate");
+      
+      // document.getElementById("visitDate").innerText = visitDate;
+      document.getElementById("slAdultPrice").innerText = slAdultCount;
+      document.getElementById("slChildPrice").innerText = slChildCount;
+      document.getElementById("foreignAdultPrice").innerText = foreignAdultCount;
+      document.getElementById("foreignChildPrice").innerText = foreignChildCount;
+      document.getElementById("duration").innerText = timeDuration;
+      // document.getElementById("dateVal").innerText = visitDate;
+    </script>
 </head>
 <body>
+    <img src="ImageS/360_F_565733952_Q43U5mBQZvC2DDWVUJjGcTSFKCMxPKV2.jpg" alt="TurtleLogo" class="logo">
+    <ul>
+        <li><a href="index.html"><b>Home</b></a></li>
+        <li><a href="Categories.HTML"><b>Categories</b></a></li>
+        <li><a href="Hikkaduwa Turtle Hatchery.html"><b>Hikkaduwa Turtle Hatchery</b></a></li>
+        <li><a href="Threats.html"><b>Threats</b></a></li>
+        
+        <li><a href="Donations.html"><b>Donations</b></a></li>
+     
+    </ul>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
     <div class="headerTickets">
-        <h1><center>PAYMENTS</center></h1>
+        <h1><center>CONFIRM BOOKINGS</center></h1>
         </div>
-        <img src="D:\image\turtle-in-the-sand-wallpaper.jpg" class="img1">
+        <img src="ImageS/bey_Kosgoda_530x420.jpg" class="img1">
+       
         <br>
-        <br>
-        <a href="PaymentPage.html" class="button1"> --Back-- </a>
-        <br>
-        <br>
-        <br>
-        <div class="para">
-        <p><center>Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order.</center></p>
-        </div>
         <br>
         <br>
         
-            <table>
-                <tr>
-                    <th colspan="2">Summary Table</th>
-                </tr>
-                <tr>
-                    <th>Date</th>
-                    <td id="date"> current date </td>
-                </tr>
-                <tr>
-                    <th>Time</th>
-                    <td id="time"></td>
-                </tr>
-                <tr>
-                    <th>Duration</th>
-                    <td id="duration"></td>
-                </tr>
-                <tr>
-                    <th>Tickets</th>
-                    <th>Charges</th>
-                </tr>
-                <tr id="slAdultRow">
-                    <th id="slAdultno"> SL Adult</th>
-                    <td id="slAdultprice"></td>
-                </tr>
-                <tr id="slChildRow">
-                    <th id="slChildno"> SL Child</th>
-                    <td id="slChildprice"></td>
-                </tr>
-                <tr id="fAdultRow">
-                    <th id="fAdultno"> Foreigner Adult</th>
-                    <td id="fAdultprice"></td>
-                </tr>
-                <tr id="fChildRow">
-                    <th id="fChildno"> Foreigner Child</th>
-                    <td id="fChildprice"></td>
-                </tr>
-                <tr id="infantRow">
-                    <th id="infantno"> Infant</th>
-                    <td id="infantprice"></td>
-                </tr>
-                <tr>
-                    <th>Total Payable </th>
-                    <th id="total"> $0</th>
-                </tr>
-            </table>
+        <p class="PK">Thank you for your order. Your order has been confirmed with us. You can show this confirmation at the entrance. Following is the summary of your order.</p>
+        
+        <br>
+        <br>
+        <br>
+        
+        <table>
+            <tr>
+              <th>Date</th>
+              <td id="dateVal">date</td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td id="timeVal">time</td>
+            </tr>
+            <tr>
+              <th>Duration</th>
+              <td id="duration">Duration</td>
+            </tr>
+            <tr>
+              <th>Tickets</th>
+              <th id="">Price</th>
+            </tr>
+            <tr>
+              <th>Local Adult</th>
+              <td id="slAdultPrice">Local Adult</td>
+            </tr>
+            <tr>
+              <th>Local Child</th>
+              <th id="slChildPrice">Local Child</th>
+
+            </tr>
+            <tr>
+              <th>Foreign Adult</th>
+              <td id="foreignAdultPrice">Foreign Adult</td>
+            </tr>
+            <tr>
+              <th>Foreign Child</th>
+              <td id="foreignChildPrice">Foreign Child</td>
+            </tr>
+            <tr>
+              <th>Infant</th>
+              <td>Free</td>
+            </tr> 
+            <tr>
+              <th>Total</th>
+              <td id="TotalPrice">Total</td>
+          </table>
+            <br>
+            <br>
+            <br>
+            <footer>
+                <div class="row primary">
+                    <div class="column about">
+                        <h3>Help Us Save The Turtles</h3>
+                        <p>
+                            Turtles plays a vital role in maintaining the health of the World's oceans for more than 100 million years.So it's our responsibility to protect these animals which are a gift from nature.
+                        </p>
+                    </div>
+                    <div class="column links">
+                        <h3>Quick SneakPeak</h3>
+                        <div class="ul90">
+                        <ul>
+                            <li>
+                                <a href="DonationsTurtles.html">Donate Now</a>
+                            </li>
+                            <li>
+                                <a href="Merch.html">Purchase Merch</a>
+                            </li>
+                            <li>
+                                <a href="Categories.HTML">Learn More</a>
+                            </li>
+        
+                        </ul>
+                        </div>
+                    </div>
+        
+        
+        
+        
+                </div>
+        </footer>
 
 
         
